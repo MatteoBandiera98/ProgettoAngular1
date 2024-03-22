@@ -1,0 +1,68 @@
+
+
+<div class="p-5 mb-4 bg-body-tertiary rounded-3" id="jumbo">
+  <div class="container-fluid py-5">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHdvv6I82aRHIwPaFD1na49dCWAD4U_HjQGQ&usqp=CAU"
+      alt=""
+      id="logo"
+      class="w-25 h-25"
+    />
+    <h1 class="display-5 fw-bold">Compra da noi le auto migliori!</h1>
+    <p class="col-md-8 fs-4"></p>
+  </div>
+</div>
+<h2>I NOSTRI BRAND</h2>
+<div class="row mx-5 w-100" id="spazi">
+  <div class="col">
+    <img
+      src="https://listcarbrands.com/wp-content/uploads/{{ oggetti[4].brandLogo }}"
+      alt="Brand Logo 1"
+      class="w-50"
+    />
+  </div>
+  <div class="col">
+    <img
+      src="https://listcarbrands.com/wp-content/uploads/{{ oggetti[1].brandLogo }}"
+      alt="Brand Logo 2"
+      class="w-50"
+    />
+  </div>
+  <div class="col">
+    <img
+      src="https://listcarbrands.com/wp-content/uploads/{{ oggetti[2].brandLogo }}"
+      alt="Brand Logo 3"
+      class="w-50"
+    />
+  </div>
+</div>
+<h3>AUTO IN PRIMO PIANO</h3>
+<div class="container">
+  <div class="row mt-3">
+    <ng-container *ngFor="let car of randomCars">
+      <div class="col">
+        <div
+          class="card mb-3"
+          [ngClass]="{
+            'bg-success': car.available,
+            'bg-danger': !car.available
+          }"
+        >
+          <div class="card-header">{{ car.brand }}</div>
+          <img
+            src="https://www.kimballstock.com/pix/car/p/{{ car.modelImage }}"
+            class="card-img-top"
+            alt="Car Image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ car.model }}</h5>
+            <p class="card-text">Year: {{ car.year }}</p>
+            <p class="card-text">Price: ${{ car.price }}</p>
+            
+            <button (click)="goToBrand(car.brand)" class="btn btn-primary">Visit {{ car.brand }}</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

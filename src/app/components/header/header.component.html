@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg bg-dark" id="nav">
+  <div class="container-fluid position-sticky">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHdvv6I82aRHIwPaFD1na49dCWAD4U_HjQGQ&usqp=CAU"
+      alt=""
+      id="logo"
+      class="w-25 h-25"
+    />
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/fiat']" routerLinkActive="active">Fiat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/ford']" routerLinkActive="active">Ford</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/audi']" routerLinkActive="active">Audi</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

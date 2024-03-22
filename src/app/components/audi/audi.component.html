@@ -1,0 +1,32 @@
+
+
+<div class="container">
+  <div id="logoAudi">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdwX_LsvKVdQcohygr1GQvaavgneoVHP0zvA&usqp=CAU" alt="Audi Logo">
+  </div>
+    <div class="jumbotron">
+      <h1>Audi Cars</h1>
+      <p>Discover our Audi car collection.</p>
+    </div>
+    <div class="row">
+      <div class="col" *ngFor="let car of oggetti">
+        <div class="card" [ngClass]="getCardClass(car)">
+          <div class="card-header">{{ car.model }}</div>
+          <img
+            src="https://www.kimballstock.com/pix/car/p/{{ car.modelImage }}"
+            class="card-img-top"
+            alt="Car Image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ car.brand }}</h5>
+            <p class="card-text">Year: {{ car.year }}</p>
+            <p class="card-text">Price: ${{ car.price }}</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
